@@ -1,0 +1,48 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <div class="wrapper">
+      <!--========== HEADER ==========-->
+      <header class="left">
+          <h1 class="brand"><a href="./index.html"> time's students news </a></h1>
+          <article class="left-article">
+              <h2 class="left-article__title">
+                  Latest news 
+                  <span class="left-article__title-2">
+                      from our students
+                  </span>
+              </h2>
+              <p class="left-article__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ducimus veniam eveniet esse possimus consectetur eos perspiciatis, architecto repudiandae eum repellat distinctio voluptatum! Vitae, sed fuga repudiandae, recusandae natus necessitatibus est error veritatis temporibus quidem sint non deleniti quibusdam aliquid, alias accusantium illum atque consequatur autem libero officia adipisci reprehenderit.</p>
+          </article>
+          <nav class="nav">
+              <ul class="nav__navbar">
+                  <li class="nav__navbar-li"><a href="./plan.html"> plan du site </a></li>
+                  <li class="nav__navbar-li"><a href="./mention.html">Mention légales </a></li>
+                  <li class="nav__navbar-li"><a href="./contact.html">Contact </a></li>
+                  <li class="nav__navbar-li"><a href="./error404.html">404 </a></li>
+                  <li class="nav__navbar-li"><a href="/add-article">Add Article </a></li>
+              </ul>
+          </nav>
+      </header>
+      <main class="right">
+          <h2 class="title">Latest news</h2>
+          <section class="flex">
+           {% for article in articles %}
+
+             <article class="news">
+                <span class="news__status team">news</span>
+                <h3 class="news__title">{{article.name}}</h3>
+                <div class="pseudo">
+                    <img src="../public/images/icon-ohz.png" alt="image du profile" class="news__pseudo--icon">
+                    <h5 class="news__pseudo--title"></h5>
+                    <span class="news__pseudo--date">le  {{article.publisheAt}}</span>
+                </div>
+                <p class="news__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias delectus corrupti distinctio voluptate aliquid? Assumenda at veniam qui libero, impedit autem consequuntur cupiditate a pariatur beatae quidem animi aperiam deserunt iusto necessitatibus odio rerum ratione exercitationem? Voluptates id libero laboriosam! Quos nesciunt ad cupiditate amet sit deserunt nisi possimus id!</p>
+                <button class="btn"><a href="/article/{{article._id}} " class="btn_lien"> continue reading </a></button>
+             </article>
+
+          {% endfor %}
+          </section>
+      </main>
+  </div>
+{% endblock %}

@@ -1,0 +1,71 @@
+
+    /*
+        abstracts/
+        vendors/
+        base/
+        layout/
+        components/
+        pages/
+        themes/ 
+        */
+@import
+    'abstracts/variables';
+
+// 2. Inclusion de nos vendors
+@import
+    'vendors/normalize.scss';
+/*
+base/
+ _reset.scss        # Reset/normalize
+ _typography.scss   # Typography rules
+                    # Etc.
+*/
+
+
+// 3. Import de la base
+@import
+    'base/reset',
+    'base/base.scss';
+
+// 4. Import des layout
+ @import
+    'layout/wrapper',
+    'layout/nav.scss',
+    'layout/left',
+    'layout/right',
+    'layout/article',
+    'layout/form';
+
+
+// 5. Import des components
+@import
+    'components/btn',
+    'components/brand',
+    'components/flex',
+    'components/left-article',
+    'components/news',
+    'components/pseudo',
+    'components/btn';
+    
+    
+  //  'components/carousel',
+
+  // 6.  pages/
+  @import
+
+    'pages/home',
+    'pages/article',
+    'pages/contact',
+    'pages/mention',
+    'pages/plan',
+    'pages/error';
+
+
+  // 7. themes/ 
+@import
+    'themes/admin';
+
+// . Import shame
+@import
+    'shame';
+

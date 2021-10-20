@@ -1,0 +1,10 @@
+.article {
+    height: 80vh;
+    margin: 2rem;
+
+    & h2 {
+        display: block;
+        font-size: 3rem;
+    }
+
+}

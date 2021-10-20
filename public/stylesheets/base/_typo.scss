@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Aleo:400,700|Lato:400,700,900|Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Capriola&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,700');
+
+// Font size for responsive
+html {
+
+    font-size: $font-size-small;
+
+    @media (min-width: $breakpoint-medium) {
+        font-size: $font-size-medium;
+    }
+
+    @media (min-width: $breakpoint-large) {
+        font-size: $font-size-large;
+    }
+    
+    @media (min-width: $breakpoint-medium) {
+        font-size: $font-size-medium;
+    }
+
+    @media (min-width: $breakpoint-large) {
+        font-size: $font-size-large;
+    }
+}
+    /*
+        ATTENTION A BIEN REMPLIR OU COMMENTER CHAQUE LIGNE
+    */
+// General text
+body, a {
+
+    line-height: 1.7;
+    font-weight: 400;
+    font-family: $font-family-label;
+    color: $color-text;
+    font-size: $font-size-small;
+
+    @media (min-width: $breakpoint-medium) {
+        font-size: $font-size-medium;
+    }
+
+    @media (min-width: $breakpoint-large) {
+        font-size: $font-size-large;
+    }
+}
+
+// Titles
+h1,
+h2,
+h3,
+h4 {
+    font-family: $font-family-title;
+    margin: inherit;
+    font-weight: bold;
+}

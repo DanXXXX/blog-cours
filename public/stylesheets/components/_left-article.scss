@@ -1,0 +1,16 @@
+.left-article {
+    text-align: right;
+    width: 75%;
+    margin-right: 2rem;
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: bolder;
+        &-2 {
+            font-style: italic;
+            font-weight: normal;
+            font-size: 1.1rem; 
+        }
+    }
+
+}

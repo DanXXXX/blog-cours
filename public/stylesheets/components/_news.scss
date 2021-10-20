@@ -1,0 +1,26 @@
+.news {
+    margin: 3rem;
+    &__status {
+        display: inline-block;
+        text-transform: uppercase;
+        color: $white;
+        border-radius: 2px;
+        text-align: center;
+        font-size: 0.8em;
+        font-weight: 700;
+        padding: 3px 6px;
+        background-color: darkgrey;
+        margin-bottom: 0.5em;
+    }  
+        & .team{
+            background-color: #dc5e53;
+        }
+        & .news {
+            background-color: #98dc62;
+        }
+        & .work {
+            background-color: #0766f0;
+        }
+
+    
+}

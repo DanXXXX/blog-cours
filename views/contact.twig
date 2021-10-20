@@ -1,0 +1,99 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <h1>{{message}}</h1>
+  <h2>{{error.status}}</h2>
+  <pre>{{error.stack}}</pre>
+
+    <div class="wrapper">
+        <!--========== Left HEADER ==========-->
+        <header class="left left-contact">
+            <h1 class="brand"><a href="./index.html"> time's students news </a></h1>
+            <article class="left-article">
+                <h2 class="left-article__title">
+                    Say a word
+                    <span class="left-article__title-2">
+                        contact us
+                    </span>
+                </h2>
+                <p class="left-article__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ducimus veniam eveniet esse possimus consectetur eos perspiciatis, architecto repudiandae eum repellat distinctio voluptatum! Vitae, sed fuga repudiandae, recusandae natus necessitatibus est error veritatis temporibus quidem sint non deleniti quibusdam aliquid, alias accusantium illum atque consequatur autem libero officia adipisci reprehenderit.</p>
+            </article>
+                <nav class="nav">
+                    <ul class="nav__navbar">
+                        <li class="nav__navbar-li"><a href="./plan.html"> plan du site </a></li>
+                        <li class="nav__navbar-li"><a href="./mention.html">Mention légales </a></li>
+                        <li class="nav__navbar-li"><a href="./contact.html">Contact </a></li>
+                    </ul>
+                </nav>
+        </header>
+            <!--========== Right Main ==========-->
+        <main class="right contact">
+            <h2 class="title">Contact</h2>
+            <section class="flex">
+                <form action="" method="POST" class="contact-form">
+                
+                    <div class="contact-form__row">
+                        <div>
+                            
+                            <input type="radio" name="gender" id="genderMme" value="madame">
+                            
+                            <label for="genderMme">Mme</label> /
+                            <input type="radio" name="gender" id="genderM" value="monsieur">
+                            <label for="genderM">M.</label>
+                        </div>
+                        <input class="contact-form__item" type="text" name="firstname" value="" placeholder="Prénom">
+                        <input class="contact-form__item" type="text" name="lastname" value="" placeholder="Nom">
+                    </div>
+                    <div class="contact-form__row">
+                        <!-- emmet: input[type="email"] -->
+                        <input class="contact-form__item" type="email" name="email" value="" placeholder="Adresse e-mail">
+                    </div>
+                    <div class="contact-form__row contact-form__row-bottom">
+                        <!-- emmet: label+select -->
+                        <label class="contact-form__label" for="source">
+                            J'ai connu ce site grâce à
+                        </label>
+                        <select class="contact-form__item" name="source" id="source">
+                            <option value="">choisir</option>
+                            <option value="fb">Facebook</option>
+                            <option value="twitter">Twitter</option>
+                            <option value="google">Google</option>
+                            <option value="bouche-a-oreilles">Bouche à oreilles</option>
+                            <option value="jpp">JT de 13h de Jean-Pierre Pernault</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="contact-form__row">
+                        <!-- emmet: label+textarea -->
+                        <label class="contact-form__label" for="messageTextarea">Pour laisser un commentaire libre à propos
+                            d'O'clock,
+                            c'est par ici :</label>
+                    </div>
+                    <div class="contact-form__row contact-form__row-bottom">
+                        <textarea class="contact-form__item contact-form__item-textarea" name="message" id="messageTextarea"
+                            placeholder="Votre message"></textarea>
+                    </div>
+
+                    <div class="contact-form__row contact-form__row-bottom">
+                        <!-- emmet: input+label -->
+                        <input class="contact-form__item contact-form__item-checkbox" type="checkbox" name="infos-ok" id="infos-ok-label">
+                        <label class="contact-form__label" for="infos-ok-label">Je certifie la véracité de ces
+                            informations.</label>
+                    </div>
+
+                    <div class="contact-form__row contact-form__row-bottom">
+                        <!-- emmet: label+input -->
+                        <label for="fileUpload">Ajouter un fichier :</label>&nbsp;
+                        <input type="file" name="file" id="fileUpload">
+                    </div>
+                    <!-- un bouton est obligatoire pour pouvoir envoyer un formulaire -->
+                    <button class="contact-form__submit">Envoyer</button>
+                    <!-- input type reset permet de vider tous les champs
+                    <input type="reset" class="contact-form__submit" value="Annuler">-->
+                </form>
+            </section>
+        </main>
+    </div>
+
+{% endblock %}
