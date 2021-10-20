@@ -6,6 +6,7 @@ const logger = require('morgan');
 const sassMiddleware = require('node-sass-middleware');
 
 const Article = require('./models/articleModel')
+const Category = require('./models/categoryModel');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -35,6 +36,14 @@ for (let index = 0; index < 8; index++) {
   //article.save()
 }
 
+for (let index = 0; index < 8; index++) {
+  category = new Category({
+    title: 'le Lorem ipsum',
+    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum quo voluptatum explicabo eaque omnis eligendi. Harum facere assumenda voluptatum modi laboriosam! Delectus provident numquam quod voluptas sapiente eum nostrum vitae? Eveniet consequuntur cumque ab consectetur magnam cum, explicabo quisquam corrupti, repellat rem maiores omnis doloremque ea laboriosam ad assumenda molestias. Architecto, laudantium amet! Non veniam dicta aperiam, minima excepturi ex consectetur iusto soluta quidem atque odit quae alias nemo dolore eveniet, fugiat sunt fuga earum repudiandae voluptatum id ratione recusandae. Numquam, iste optio! Voluptatem culpa in architecto, eum cupiditate at beatae minima aliquid qui dignissimos laudantium quas fugit fugiat corporis.'
+  })
+  
+  // category.save()
+}
   
 
   // .then((result) => {

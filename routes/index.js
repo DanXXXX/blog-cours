@@ -6,5 +6,6 @@ var router = express.Router();
 router.get('/', articleController.list);
 
 router.get('/article/:id', articleController.show );
+router.get('/add-article', articleController.add );
 
 module.exports = router;

@@ -1,0 +1,67 @@
+{% extends "layout.twig" %}
+
+{% block body %}
+<div class="wrapper">
+      <!--========== HEADER ==========-->
+      <header class="left">
+          <h1 class="brand"><a href="./index.html"> time's students news </a></h1>
+          <article class="left-article">
+              <h2 class="left-article__title">
+                  Latest news 
+                  <span class="left-article__title-2">
+                      from our students
+                  </span>
+              </h2>
+              <p class="left-article__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ducimus veniam eveniet esse possimus consectetur eos perspiciatis, architecto repudiandae eum repellat distinctio voluptatum! Vitae, sed fuga repudiandae, recusandae natus necessitatibus est error veritatis temporibus quidem sint non deleniti quibusdam aliquid, alias accusantium illum atque consequatur autem libero officia adipisci reprehenderit.</p>
+          </article>
+          <nav class="nav">
+              <ul class="nav__navbar">
+                  <li class="nav__navbar-li"><a href="./plan.html"> plan du site </a></li>
+                  <li class="nav__navbar-li"><a href="./mention.html">Mention légales </a></li>
+                  <li class="nav__navbar-li"><a href="./contact.html">Contact </a></li>
+                  <li class="nav__navbar-li"><a href="./error404.html">404 </a></li>
+                  <li class="nav__navbar-li"><a href="/add-article">Add Article </a></li>
+              </ul>
+          </nav>
+      </header>
+    <main class="right">
+        <article class="article">
+        <h2 class="title">{{article.name}}</h2>
+    <form action="/add-article" method="post" accept-charset="UTF-8">
+        <div class="form-group">
+            <label for=""> Title :</label>
+            <input type="text" name="title" class="form-control" >
+        </div>
+        <div class="form-group">
+            <label for=""> Category :</label>
+            <select type="text" name="category" id="" class="form-control" >
+               <option value=""> Choice your article category</option>
+               {% if categories %}
+                    {% for category in categories %}
+                        <option value="">"{{category.title}}"{{category.title}} </option>
+                    {% endfor %}
+               {% endif %}
+               
+                <option value=""> Choice your article category</option>
+                <option value=""> team</option>
+                <option value=""> news</option>
+                <option value="">work</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for=""> Content :</label>
+            <textarea  name="content" id="content" cols="30" row="10" class="form-control" ></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for=""> Image :</label>
+            <input type="file" name="image" class="form-control" >
+        </div>
+
+        <button class="btn btn">Add Article</button>
+    </form>
+    </main>
+</div>
+
+{% endblock %}

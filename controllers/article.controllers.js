@@ -1,4 +1,5 @@
 const Article = require('../models/articleModel');
+const Category = require('../models/categoryModel');
 
 exports.list = (req, res) => {
     Article.find()
@@ -23,3 +24,13 @@ exports.show = (req, res) => {
     //console.error(error);
   });
 } 
+
+exports.add = (req, res) => {
+         Category.find()
+         .then((categories) => {
+         res.render('add-article', {categories: categories});
+           
+         }).catch((err) => {
+           res.redirect('/');
+         });
+}
